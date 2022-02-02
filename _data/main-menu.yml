@@ -1,0 +1,14 @@
+menu_title: Main Menu
+itens:
+
+- title: Inicio
+  url: /index
+  
+- title: Hacking
+  url: /category/hacking
+
+- title: CTFs
+  url: /category/CTFs
+  
+- title: Rant
+  url: /category/rant

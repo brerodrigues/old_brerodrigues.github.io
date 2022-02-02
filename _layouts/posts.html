@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{{ content }}
+{% unless page.category == null %}
+  {% capture pageCategory %}{{ page.category }}{% endcapture %}
+  {% unless site.categories[pageCategory].size == 1 %}
+    <div class="related-posts">
+        <strong>Posts de {{ page.category }} relacionados.</strong>
+        {% for post in site.categories[pageCategory] limit:3 %}
+          {% unless post.title == page.title %}
+           <li>
+            <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+              {{ post.title }}
+            </a>
+           </li>
+          {% endunless %}
+        {% endfor %}
+    </div>
+  {% endunless %}
+{% endunless %}

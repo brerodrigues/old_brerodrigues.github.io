@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% include header.html %}
+<div style="padding-top: 4px; padding-bottom: 4px;">
+   <div class="around">
+      <!-- unless page.category == null -->
+         {% include details.html %}
+      <!-- endunless -->
+      <div style="border-top: 1px solid black; border-bottom: 2px solid black">
+         {% if page.title %}
+         <div class="opt" id="article">
+            <strong>Título</strong>
+            : {{ page.title }}
+         </div>
+         {% endif %}
+         {% if page.date %}
+         <div class="opt-bottom">
+            <strong>Data</strong>
+            : {{ page.date | date: "%d/%m/%Y" }}
+         </div>
+         {% endif %}
+         <pre>
+            {{ content }}
+         </pre>
+      </div>
+   </div>
+</div>
+{% include footer.html %}
