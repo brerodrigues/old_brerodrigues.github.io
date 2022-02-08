@@ -161,7 +161,7 @@ hr {
     max-width: 100%;
 }
 
-.code {
+code {
     white-space: pre-wrap;
 }
 
