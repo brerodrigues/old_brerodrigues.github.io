@@ -31,6 +31,7 @@ Depois de executar o python que monta o shellcode no arquivo pwn, execute o coma
 
 ```
 b@skynet ~> cat pwn | ./shellcode_reader
+
 pwned
 ```
 
