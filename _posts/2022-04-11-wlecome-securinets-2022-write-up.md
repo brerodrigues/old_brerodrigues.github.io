@@ -17,6 +17,7 @@ Esse resumo pode ter parecido grego para o não iniciado, então para os novinho
 
 A execução e o código do exploit completo podem ser observados abaixo. Destaco a facilidade que é utilizar a pwntools para criar rop chains (e vários outros processos repetitivos manuais necessários para escrever um exploit, vale a pena aprender e dominar essa porra) e demonstro no código essa diferença. Tentei comentar o que achei interessante para complementar a postagem.
 
+Executando:
 ```
 b@vbm ~/c/s/pwn1> python3 xpl.py
 [+] Opening connection to 20.216.39.14 on port 1237: Done
@@ -59,4 +60,5 @@ $ cat flag.txt
 Securinets{5d91d2e01b854fd457c1d8b592a19b38af6b4a33c6362b7d}
 ```
 
+E o exploit:
 <script src="https://gist.github.com/brerodrigues/9161ae24483d0e2f78aef8e6318088b1.js"></script>
