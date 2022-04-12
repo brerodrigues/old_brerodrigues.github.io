@@ -8,7 +8,7 @@ categories: [CTFs]
 ---
 **Link para o challenge: https://github.com/brerodrigues/exploit_drafts/tree/main/ctfing/Securinets_CTF_Quals_2022/1_welc**
 
-Um clássico stack overflow. O binário não tem **stack canaries** nem **PIE**, mas está com **NX** ligado, então nada de shellcode. Por ter vindo uma libc junto do challenge, um ataque **return-to-libc** é facilitado e possível mesmo que o servidor esteja com **ASLR** habilitado.
+Um clássico stack overflow. O binário não tem **stack canaries** nem **PIE**, mas está com **NX** ligado, então nada de shellcode. Por ter vindo uma libc junto do challenge, um ataque **return-to-libc** é facilitado e possível mesmo que o servidor esteja com **ASLR** habilitado. Sabendo o que tenho e o que posso fazer foi só questão de pôr em prática:
 
 * Primeiro obtenho um leak do endereço de puts na libc. Consigo fazer isso com facilidade porque sem PIE no binário posso utilizar todos os endereços do mesmo. Depois de obter o endereço de puts, reinicio o binário finalizando minha primeira rop chain com o endereço de \_start. 
 * Com o leak, basta usar um pouco de matemática para calcular on-demand o endereço de qualquer função da libc e montar uma segunda rop chain para executar **system('/bin/sh')**, obter a shell e ler a flag.
