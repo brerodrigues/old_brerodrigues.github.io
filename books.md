@@ -23,6 +23,7 @@ permalink: books
 - [Sobrevivente](http://leya.com.br/sobrevivente/)
 - [Post Office](https://www.livrariacultura.com.br/p/livros/literatura-internacional/post-office-1868454)
 - [Elite da Tropa](https://www.saraiva.com.br/elite-da-tropa-1100552.html)
+- [Na fissura: Uma história do fracasso no combate às drogas](https://www.amazon.com.br/Na-fissura-hist%C3%B3ria-fracasso-combate/dp/8535931600)
 
 **2018**
 
